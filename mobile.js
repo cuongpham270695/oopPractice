@@ -3,9 +3,9 @@ class Mobile {
         this.id = id;
         this.message = message;
         this.name = name;
-        this.arrsendmess = [];
-        this.arrreceivemess = [];
-        this.arrcurrent = [];
+        this.arrSendmess = [];
+        this.arrReceivemess = [];
+        this.arrCurrent = [];
         this.battery = 100;
         this.status = true;
     }
@@ -27,7 +27,7 @@ class Mobile {
 
     writeMessage(message) {
         if (this.getStatus()) {
-            this.arrcurrent.push(message);
+            this.arrCurrent.push(message);
             this.battery--;
         }
     }
@@ -54,8 +54,8 @@ class Mobile {
     }
     storeMessage(message,obj){
         if (this.getStatus()){
-            obj.arrreceivemess.push(message);
-            this.arrsendmess.push(message);
+            obj.arrReceivemess.push(message);
+            this.arrSendmess.push(message);
             obj.battery--;
             this.battery--;
         }
