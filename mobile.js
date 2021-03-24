@@ -1,5 +1,5 @@
 class Mobile {
-    constructor(id, name, message, arrsendmess, arrreceivemess, arrcurrent) {
+    constructor(id, name, message, arrSendmess, arrReceivemess, arrCurrent) {
         this.id = id;
         this.message = message;
         this.name = name;
